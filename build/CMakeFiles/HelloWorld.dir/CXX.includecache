@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Volumes/DataHD/workspace/project_cpp/helloworld/area.h
+
+/Volumes/DataHD/workspace/project_cpp/helloworld/main.cpp
+iostream
+-
+stdio.h
+-
+area.h
+/Volumes/DataHD/workspace/project_cpp/helloworld/area.h
+util.h
+/Volumes/DataHD/workspace/project_cpp/helloworld/util.h
+string
+/Volumes/DataHD/workspace/project_cpp/helloworld/string
+
+/Volumes/DataHD/workspace/project_cpp/helloworld/util.h
+

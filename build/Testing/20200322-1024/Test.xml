@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Darwin-clang++"
+	BuildStamp="20200322-1024-Experimental"
+	Name="MacZ390i79700.local"
+	Generator="ctest-3.16.5"
+	CompilerName="/usr/bin/clang++"
+	CompilerVersion="11.0.0.11000033"
+	OSName="Mac OS X"
+	Hostname="MacZ390i79700.local"
+	OSRelease="10.15.3"
+	OSVersion="19D76"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="158"
+	ProcessorCacheSize="32768"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="32768"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="3000"
+	>
+	<Testing>
+		<StartDateTime>Mar 22 18:24 CST</StartDateTime>
+		<StartTestTime>1584872643</StartTestTime>
+		<TestList/>
+		<EndDateTime>Mar 22 18:24 CST</EndDateTime>
+		<EndTestTime>1584872643</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
