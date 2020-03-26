@@ -17,33 +17,83 @@ void nestedStruct();
 void pointerStruct();
 void pointerStructArray();
 void doSwapStruct();
-void swapStruct(struct data *, struct data *);
-int maximumGrade(struct data arr[]);
+// void swapStruct(struct data *, struct data *);
+// int maximumGrade(struct data arr[]);
 void getMaximum();
-struct data
+void doEnum();
+void operateFile();
+void operateFile2();
+typedef struct
 {
     char name[10];
     int math;
-};
+} SCORE;
 
 int main(int, char **)
 {
     printf("\n");
 
-    getMaximum();
+    operateFile2();
 
     printf("\n");
     return 0;
 }
 
-void getMaximum()
+void operateFile2()
 {
-    struct data student[3] = {{"Andy", 10}, {"Mary", 90}, {"Flora", 85}};
-    int index = maximumGrade(student);
-    printf("%s has maximum grade %d\n", student[index].name, student[index].math);
+    char ch;
+    int i = 0;
+    char str[80];
+    FILE *fptr3 = fopen("/Volumes/DataHD/workspace/project_cpp/helloworld/output2.txt", "a");
+    printf("please input char");
+    while ((ch = getchar()) != 13 && i < 80)
+    {
+        str[i++] = ch;
+    }
+
+    putc('\n', fptr3);
+    fwrite(str, sizeof(str), i, fptr3);
+    fclose(fptr3);
 }
 
-int maximumGrade(struct data arr[])
+void operateFile()
+{
+    char ch;
+    int count = 0;
+    FILE *fptr1, *fptr2, *fptr3;
+    fptr1 = fopen("/Volumes/DataHD/workspace/project_cpp/helloworld/test.txt", "r");
+    fptr2 = fopen("/Volumes/DataHD/workspace/project_cpp/helloworld/output.txt", "w");
+    fptr3 = fopen("/Volumes/DataHD/workspace/project_cpp/helloworld/output2.txt", "a");
+    if (fptr1 != NULL && fptr2 != NULL)
+    {
+        while ((ch = getc(fptr1)) != EOF)
+        {
+            putc(ch, fptr2);
+            printf("%c", ch);
+            count++;
+        }
+        fclose(fptr1);
+        fclose(fptr2);
+        printf("總共有%d個字元\n", count);
+    }
+    else
+    {
+        printf("NULL\n");
+    }
+}
+
+void doEnum()
+{
+    enum color
+    {
+        red,
+        green,
+        blue
+    } shirt;
+    shirt = red;
+}
+
+int maximumGrade(SCORE *arr)
 {
     int index = 0;
     int max = arr->math;
@@ -57,19 +107,26 @@ int maximumGrade(struct data arr[])
     return index;
 }
 
+void getMaximum()
+{
+    SCORE student[3] = {{"Andy", 10}, {"Mary", 90}, {"Flora", 85}};
+    int index = maximumGrade(student);
+    printf("%s has maximum grade %d\n", student[index].name, student[index].math);
+}
+
+void swapStruct(SCORE *data1, SCORE *data2)
+{
+    SCORE tmp = *data1;
+    *data1 = *data2;
+    *data2 = tmp;
+}
+
 void doSwapStruct()
 {
-    struct data Andy = {"Andy", 10}, Mary = {"Mary", 90};
+    SCORE Andy = {"Andy", 10}, Mary = {"Mary", 90};
     swapStruct(&Andy, &Mary);
     printf("Name: %s, Grade: %d\n", Andy.name, Andy.math);
     printf("Name: %s, Grade: %d\n", Mary.name, Mary.math);
-}
-
-void swapStruct(struct data *data1, struct data *data2)
-{
-    struct data tmp = *data1;
-    *data1 = *data2;
-    *data2 = tmp;
 }
 
 void pointerStructArray()
