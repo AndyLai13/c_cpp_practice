@@ -6,6 +6,11 @@
 },
 {
   "directory": "/Volumes/DataHD/workspace/project_cpp/helloworld/build",
+  "command": "/usr/bin/clang++    -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/HelloWorld.dir/CWin.cpp.o -c /Volumes/DataHD/workspace/project_cpp/helloworld/CWin.cpp",
+  "file": "/Volumes/DataHD/workspace/project_cpp/helloworld/CWin.cpp"
+},
+{
+  "directory": "/Volumes/DataHD/workspace/project_cpp/helloworld/build",
   "command": "/usr/bin/clang++    -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/HelloWorld.dir/main.cpp.o -c /Volumes/DataHD/workspace/project_cpp/helloworld/main.cpp",
   "file": "/Volumes/DataHD/workspace/project_cpp/helloworld/main.cpp"
 }

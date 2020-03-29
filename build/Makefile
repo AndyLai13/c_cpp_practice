@@ -520,6 +520,33 @@ Experimental/fast:
 	$(MAKE) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
 .PHONY : Experimental/fast
 
+CWin.o: CWin.cpp.o
+
+.PHONY : CWin.o
+
+# target to build an object file
+CWin.cpp.o:
+	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/CWin.cpp.o
+.PHONY : CWin.cpp.o
+
+CWin.i: CWin.cpp.i
+
+.PHONY : CWin.i
+
+# target to preprocess a source file
+CWin.cpp.i:
+	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/CWin.cpp.i
+.PHONY : CWin.cpp.i
+
+CWin.s: CWin.cpp.s
+
+.PHONY : CWin.s
+
+# target to generate assembly for a file
+CWin.cpp.s:
+	$(MAKE) -f CMakeFiles/HelloWorld.dir/build.make CMakeFiles/HelloWorld.dir/CWin.cpp.s
+.PHONY : CWin.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -614,6 +641,9 @@ help:
 	@echo "... ExperimentalMemCheck"
 	@echo "... Continuous"
 	@echo "... Experimental"
+	@echo "... CWin.o"
+	@echo "... CWin.i"
+	@echo "... CWin.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

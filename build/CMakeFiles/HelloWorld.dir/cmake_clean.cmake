@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/HelloWorld.dir/CWin.cpp.o"
   "CMakeFiles/HelloWorld.dir/main.cpp.o"
   "CMakeFiles/HelloWorld.dir/util.cpp.o"
   "HelloWorld"

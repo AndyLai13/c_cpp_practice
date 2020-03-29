@@ -1,9 +1,16 @@
 #include <iostream>
 #include <stdio.h>
-#include "area.h"
+#include <math.h>
 #include "util.h"
 #include "string"
-#define SIZE 3
+#include "area.h"
+#include "volume.h"
+#include "CWin.hpp"
+
+#define SIZE 15
+#define STR "Hello C language.\n"
+
+using namespace std;
 
 void address(int *);
 void add5(int *);
@@ -23,20 +30,110 @@ void getMaximum();
 void doEnum();
 void operateFile();
 void operateFile2();
+void doMalloc();
+void nodeTest();
+void nodeTest2();
+void classTest();
+
 typedef struct
 {
     char name[10];
     int math;
 } SCORE;
+int cnt;
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+typedef struct node NODE;
 
 int main(int, char **)
 {
     printf("\n");
 
-    operateFile2();
+    classTest();
 
     printf("\n");
     return 0;
+}
+
+void classTest() {
+    CWin cWin1("s1", 20, 30);
+    CWin cWin2("s2", 30, 50);
+    cWin1.showWeightAndHeight();
+    cWin2.showWeightAndHeight();
+
+}
+
+void nodeTest()
+{
+    NODE a, b, c;
+    NODE *ptr = &a;
+
+    a.data = 12,
+    b.data = 30;
+    c.data = 64;
+
+    a.next = &b;
+    b.next = &c;
+    c.next = NULL;
+
+    while (ptr != NULL)
+    {
+        printf("addr = %p\n", ptr);
+        printf("data = %d\n", ptr->data);
+        printf("next = %p\n", ptr->next);
+
+        ptr = ptr->next;
+    }
+}
+
+void nodeTest2()
+{
+    int num;
+    NODE *first, *current, *previous;
+    printf("input node number: ");
+    scanf("%d", &num);
+    for (int i = 0; i < num; i++)
+    {
+        current = (NODE *)malloc(sizeof(NODE));
+        printf("input data for node %d:", i);
+        scanf("%d", &current->data);
+        if (i == 0)
+            first = current;
+        else
+            previous->next = current;
+        current->next = NULL;
+        previous = current;
+    }
+
+    current = first;
+
+    while (current != NULL)
+    {
+        printf("addr = %p\n", current);
+        printf("data = %d\n", current->data);
+        printf("next = %p\n", current->next);
+        current = current->next;
+    }
+}
+
+void doMalloc()
+{
+    int *ptr;
+    ptr = (int *)malloc(sizeof(int));
+    *ptr = 1;
+    *(ptr + 1) = 5;
+    *(ptr + 2) = 3;
+
+    for (int i = 0; i < 3; i++)
+    {
+        printf("ptr+%d = %d\n", i, *(ptr + i));
+    }
+    free(ptr);
 }
 
 void operateFile2()
@@ -264,11 +361,11 @@ int *max(int *n1, int *n2)
     return *n1 > *n2 ? n1 : n2;
 }
 
-void rect(int x, int y, int *area, int *peri)
-{
-    *area = x * y;
-    *peri = 2 * (x + y);
-}
+// void rect(int x, int y, int *area, int *peri)
+// {
+//     *area = x * y;
+//     *peri = 2 * (x + y);
+// }
 
 void swap(int *n1, int *n2)
 {

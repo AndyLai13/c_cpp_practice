@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Volumes/DataHD/workspace/project_cpp/helloworld/CWin.cpp
+CWin.hpp
+/Volumes/DataHD/workspace/project_cpp/helloworld/CWin.hpp
+
+/Volumes/DataHD/workspace/project_cpp/helloworld/CWin.hpp
+cstdlib
+-
+iostream
+-
+
 /Volumes/DataHD/workspace/project_cpp/helloworld/area.h
 
 /Volumes/DataHD/workspace/project_cpp/helloworld/main.cpp
@@ -13,12 +23,20 @@ iostream
 -
 stdio.h
 -
-area.h
-/Volumes/DataHD/workspace/project_cpp/helloworld/area.h
+math.h
+-
 util.h
 /Volumes/DataHD/workspace/project_cpp/helloworld/util.h
 string
 /Volumes/DataHD/workspace/project_cpp/helloworld/string
+area.h
+/Volumes/DataHD/workspace/project_cpp/helloworld/area.h
+volume.h
+/Volumes/DataHD/workspace/project_cpp/helloworld/volume.h
+CWin.hpp
+/Volumes/DataHD/workspace/project_cpp/helloworld/CWin.hpp
 
 /Volumes/DataHD/workspace/project_cpp/helloworld/util.h
+
+/Volumes/DataHD/workspace/project_cpp/helloworld/volume.h
 

@@ -6,6 +6,7 @@ enable_testing()
 
 add_executable(HelloWorld
 util.cpp
+CWin.cpp
 main.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
